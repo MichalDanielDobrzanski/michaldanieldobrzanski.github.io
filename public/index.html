@@ -1,58 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Landing pages, privacy policies and terms for the Planter and Hourglass mobile apps by Oscillator." />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-  <title>Oscillator — Planter & Hourglass</title>
-
-  <!-- Start Single Page Apps for GitHub Pages -->
-  <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT License
-    // https://github.com/rafgraph/spa-github-pages
-    // This script checks to see if a redirect is present in the query string,
-    // converts it back into the correct url and adds it to the
-    // browser's history using window.history.replaceState(...),
-    // which won't cause the browser to attempt to load the new url.
-    // When the single page app is loaded further down in this file,
-    // the correct url will be waiting in the browser's history for
-    // the single page app to route accordingly.
-    (function (l) {
-      if (l.search[1] === '/') {
-        var decoded = l.search.slice(1).split('&').map(function (s) {
-          return s.replace(/~and~/g, '&')
-        }).join('?');
-        window.history.replaceState(null, null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    }(window.location))
-  </script>
-  <!-- End Single Page Apps for GitHub Pages -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oscillator — apps by Michał Daniel Dobrzański</title>
+  <meta name="description" content="Home for Oscillator's mobile apps — Planter, Hourglass and Lumen. Landing pages, privacy policies and terms.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
-
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-</body>
+  <div class="wrap">
+    <header>
+      <h1>Oscillator</h1>
+      <p class="lede">Mobile apps by Michał Daniel Dobrzański.</p>
+    </header>
 
+    <main>
+      <div class="cards">
+        <div class="card">
+          <h3>Planter</h3>
+          <p>A clean, intuitive plant-care diary — track watering, fertilising and everything your plants need.</p>
+          <p><a href="/planter/">Open Planter →</a></p>
+        </div>
+        <div class="card">
+          <h3>Hourglass</h3>
+          <p>A beautiful sand timer whose simulated sand is always exactly in sync with the clock. No ads, no tracking.</p>
+          <p><a href="/hourglass/">Open Hourglass →</a></p>
+        </div>
+        <div class="card">
+          <h3>Lumen</h3>
+          <p>A personalised AI prayer companion.</p>
+          <p><a href="/lumen/">Open Lumen →</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <a href="/contact/">Contact</a> ·
+      <a href="https://github.com/MichalDanielDobrzanski/">GitHub</a>
+      <br>© Oscillator Michał Dobrzański
+    </footer>
+  </div>
+</body>
 </html>
