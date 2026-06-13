@@ -1,0 +1,11 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+      {
+        "appID": "AVD77PY778.com.oscillator.planter.ios.prod",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

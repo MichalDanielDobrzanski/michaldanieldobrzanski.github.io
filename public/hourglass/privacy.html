@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Hourglass (Clepsydra)</title>
+  <meta name="description" content="Privacy policy for the Hourglass (Clepsydra) timer app for Android and iOS.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta name="theme-color" content="#0c0f16">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="./">Clepsydra</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: June 13, 2026 · Applies to Hourglass (Clepsydra) 3.0 and later on Android and iOS</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <p><strong>The short version: no ads, no advertising trackers, no accounts.</strong>
+      The app uses Google Firebase Analytics to collect anonymous, aggregated usage data
+      (which features get used) so we can improve it — with the advertising identifier
+      disabled. It collects no name, email, contacts, precise location, or advertising ID.
+      Everything else stays on your device.</p>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>
+      Hourglass (also referred to by its project name, <em>Clepsydra</em>) is published
+      by Michał Daniel Dobrzański ("we", "us"). Contact:
+      <a href="mailto:dobrzanskioscillator@gmail.com">dobrzanskioscillator@gmail.com</a>.
+    </p>
+
+    <h2>2. Data we collect</h2>
+    <p>
+      The Android app uses <strong>Google Firebase Analytics</strong> to collect anonymous,
+      aggregated usage data that helps us understand how the app is used and improve it. This
+      covers app-interaction events — for example: a timer was started, paused, finished, or
+      reset; a duration was set; a setting was changed (theme, sound, vibration, gravity
+      mode, zen mode, language). Alongside these, Firebase automatically collects a
+      randomly-generated app-instance identifier and basic technical context (device model,
+      operating-system and app version, and an approximate region derived from your IP
+      address by Google).
+    </p>
+    <p>
+      We have <strong>disabled the advertising identifier (AD_ID)</strong>, so this data is
+      not tied to an advertising profile and is not used for advertising. We do not collect
+      your name, email address, contacts, precise location, or the contents of anything you
+      do in the app beyond the event names above. We do not sell or share this data, and we
+      use no advertising SDKs.
+    </p>
+    <p>
+      This processing is in our legitimate interest in maintaining and improving the app.
+      Firebase Analytics acts as our processor; Google processes the data under its own terms
+      (see <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> and
+      <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>). The current
+      iOS build contains no analytics SDK; if that changes we will update this policy first.
+    </p>
+
+    <h2>3. Data stored on your device only</h2>
+    <p>To function as a timer, the app stores a small amount of data locally
+    (Android: app preferences; iOS: user defaults):</p>
+    <ul>
+      <li>your chosen timer duration and the timer's current state (including the time
+          it is due to finish);</li>
+      <li>your preferences: sand color theme, sound, vibration, and keep-screen-awake
+          settings.</li>
+    </ul>
+    <p>
+      This data never leaves your device. It is removed when you uninstall the app
+      (on Android it may be included in your device's standard encrypted backups,
+      controlled by your device settings).
+    </p>
+
+    <h2>4. Permissions and system features we use, and why</h2>
+    <table>
+      <tr><th>Permission / feature</th><th>Why the app needs it</th></tr>
+      <tr>
+        <td>Notifications (Android <code>POST_NOTIFICATIONS</code>, iOS notification
+            authorization)</td>
+        <td>To alert you when the timer finishes while the app is in the background.
+            Optional — the timer still works if you decline, but you will only see the
+            alert inside the app.</td>
+      </tr>
+      <tr>
+        <td>Exact alarms (Android <code>USE_EXACT_ALARM</code>)</td>
+        <td>So the finished-timer alert fires at the exact moment your countdown ends,
+            even in battery-saving modes. This permission exists specifically for alarm
+            and timer apps.</td>
+      </tr>
+      <tr>
+        <td>Run at boot (Android <code>RECEIVE_BOOT_COMPLETED</code>)</td>
+        <td>To re-arm a running timer's alarm if your device restarts before the timer
+            ends. The app does not otherwise run at startup.</td>
+      </tr>
+      <tr>
+        <td>Vibration (Android <code>VIBRATE</code>, iOS haptics)</td>
+        <td>For the vibration alert when the timer finishes (can be turned off in
+            settings).</td>
+      </tr>
+      <tr>
+        <td>Time-sensitive notifications (iOS)</td>
+        <td>So the finished-timer alert can break through Focus modes, as a timer is
+            expected to.</td>
+      </tr>
+    </table>
+    <p>The app uses no location, camera, microphone, contacts, storage, or any other
+       sensitive permission.</p>
+
+    <h2>5. Children</h2>
+    <p>
+      The app is suitable for all ages but is not directed to children, and we do not
+      knowingly collect personal data from children. The analytics described above is
+      anonymous and not used to build profiles of individuals.
+    </p>
+
+    <h2>6. Third parties</h2>
+    <p>
+      We use one third-party service: <strong>Google Firebase Analytics</strong>, as
+      described in section 2, which processes the anonymous usage data on our behalf under
+      Google's privacy terms. We bundle no advertising services and share no data for
+      advertising. If you downloaded the app from Google Play or the Apple App Store, those
+      stores process your purchase/download under their own privacy policies, independently
+      of us.
+    </p>
+
+    <h2>7. Your rights</h2>
+    <p>
+      The usage analytics we hold is anonymous and not linked to your identity, so we cannot
+      single out your records to access, correct, or export them. You can stop new analytics
+      collection at any time by clearing the app's data or uninstalling it; Google also lets
+      you reset the underlying app-instance identifier by clearing app data. All on-device
+      data (section 3) is removed by uninstalling the app. If you have questions about your
+      rights under GDPR, CCPA, or similar laws, contact us at the address below.
+    </p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>
+      If a future version of the app ever changes what data it handles, we will update
+      this policy first and note the change prominently here, with a new effective
+      date, before shipping that version.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      <a href="mailto:dobrzanskioscillator@gmail.com">dobrzanskioscillator@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>
+    <a href="./">Home</a> ·
+    <a href="terms.html">Terms of Service</a>
+    <br>© 2026 Michał Daniel Dobrzański
+  </footer>
+</body>
+</html>

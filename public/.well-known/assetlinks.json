@@ -1,0 +1,20 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.oscillator.planter.prod",
+      "sha256_cert_fingerprints":
+        ["70:9E:BA:DE:BC:BE:71:3A:92:14:E5:55:C7:2B:BB:D0:9B:93:5A:AB:F6:2D:93:8C:4E:67:6E:BC:7D:12:DC:3B"]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.oscillator.planter.prod.debug",
+      "sha256_cert_fingerprints":
+        ["C8:8E:3C:6B:B2:28:C6:D5:38:EF:CE:75:9A:C5:9F:9B:65:0D:90:1C:50:5C:9E:E8:5F:A9:EB:E8:90:B8:BF:0F"]
+    }
+  }
+]
