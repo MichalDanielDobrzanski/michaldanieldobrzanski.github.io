@@ -1,88 +1,64 @@
-# Getting Started with Create React App
+# michaldanieldobrzanski.github.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The web home for Oscillator's mobile apps — landing pages, privacy policies and
+terms — served at <https://michaldanieldobrzanski.github.io/>.
 
-## Available Scripts
+It is a [Create React App](https://github.com/facebook/create-react-app) that
+provides the root site and the Planter pages, plus **static per-app sites** under
+`public/<app>/`. Everything is built and published to GitHub Pages by a GitHub
+Actions workflow on every push to `main`.
 
-In the project directory, you can run:
+## URL map
 
-### `npm start`
+| Path | Served by | Notes |
+| --- | --- | --- |
+| `/` | React (`src/pages/Home.js`) | landing, links to each product |
+| `/planter/privacypolicy`, `/planter/termsandconditions`, `/planter/delete` | static `public/planter/*.html` | referenced by the Planter store listing — kept as static files so they return a real `200` |
+| `/contact` | React route | |
+| `/hourglass/` (`privacy.html`, `terms.html`, `index.html`) | static `public/hourglass/` | Hourglass (Clepsydra) site; this is the app's `SITE_URL` |
+| `/lumen/` | static `public/lumen/` | Lumen marketing + legal site |
+| `/app-ads.txt` | static `public/app-ads.txt` | AdMob authorized sellers — **must** stay at the root |
+| `/.well-known/assetlinks.json`, `/.well-known/apple-app-site-association` | static `public/.well-known/` | Planter Android/iOS deep-link association — **must** stay at the root |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GitHub Pages is configured with **Source = GitHub Actions** (not "Deploy from a
+branch"). The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+runs on every push to `main`:
 
-### `npm test`
+1. `npm ci`
+2. `npm run build` (with `CI=false` so lint warnings don't fail the build)
+3. uploads `build/` as a Pages artifact and deploys it
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Actions pipeline serves the artifact verbatim (no Jekyll processing), so the
+`.well-known` dotfile directory and `app-ads.txt` survive. **Do not switch the
+Pages source back to a branch** without adding a `.nojekyll` file, or `.well-known`
+will be stripped.
 
-### `npm run build`
+To deploy: merge/push to `main` and watch the **Actions** tab.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Local development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-### github pages
-```
-npm install gh-pages --save-dev
-```
-https://hackernoon.com/how-to-deploy-a-react-app-to-github-pages
-
-To deploy:
-```
-npm run deploy
+```bash
+npm install
+npm start        # dev server at http://localhost:3000
+npm run build    # production build into build/
 ```
 
-Issues:
-- handle 404s like this: https://create-react-app.dev/docs/deployment/#notes-on-client-side-routing
+## Adding or updating a product page
 
-### MUI props
-https://mui.com/material-ui/api/container/#props
+Drop a self-contained static site (relative asset paths) into `public/<app>/` and
+push to `main`. Each app's own repo can automate this — e.g. Hourglass ships a
+`site/publish.sh` that clones this repo, copies its `site/` into
+`public/hourglass/`, commits and pushes `main` (the Actions workflow does the
+deploy).
+
+Keep store-/app-referenced legal URLs as **static files** (real `200`s) rather than
+React routes: a client-side route only returns `200` after a JS redirect (via
+`public/404.html`), which a non-JS validator would see as a `404`.
+
+## History
+
+The site previously ran on Jekyll (served from the `jekyll` branch); that content
+has been superseded by this app. The legacy `jekyll` and `gh-pages` branches are no
+longer the Pages source.

@@ -34,7 +34,7 @@ export default function Home() {
           justifyContent="center"
         >
           <Button href={ROUTES.PLANTER_HOME_ROUTE} variant="contained">Planter</Button>
-          <Button href="/clepsydra/" variant="contained">Hourglass</Button>
+          <Button href="/hourglass/" variant="contained">Hourglass</Button>
         </Stack>
       </Container>
     </main>
