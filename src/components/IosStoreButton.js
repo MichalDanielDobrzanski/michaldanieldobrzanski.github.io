@@ -1,7 +1,4 @@
 import React from 'react';
-import MobileStoreButton from 'react-mobile-store-button';
-import Box from '@mui/material/Box';
-
 
 export default class IosStoreButton extends React.Component {
     render() {

@@ -7,14 +7,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import PlanterHome from './pages/PlanterHome';
 import Contact from './pages/Contact.js';
-import PlanterPrivacyPolicy from './pages/PlanterPrivacyPolicy.js';
-import PlanterTC from './pages/PlanterTC.js';
-import HourglassPrivacyPolicy from './pages/HourglassPrivacyPolicy.js';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
-import PlanterDelete from './pages/PlanterDelete.js';
 
 const theme = createTheme({
   typography: {
@@ -57,10 +53,6 @@ export default function App() {
               <Route path={ROUTES.HOME} element={<Home />} exact />
               <Route path={ROUTES.PLANTER_HOME_ROUTE} element={<PlanterHome />} exact />
               <Route path={ROUTES.CONTACT_ROUTE} element={<Contact />} exact />
-              <Route path={ROUTES.PLANTER_PRIVACY_POLICY} element={<PlanterPrivacyPolicy />} exact />
-              <Route path={ROUTES.HOURGLASS_PRIVACY_POLICY} element={<HourglassPrivacyPolicy />} exact />
-              <Route path={ROUTES.PLANTER_TC} element={<PlanterTC />} exact />
-              <Route path={ROUTES.PLANTER_DELETE} element={<PlanterDelete />} exact />
             </Routes>
           </>
 
