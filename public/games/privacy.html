@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy — Oscillator Games</title>
-  <meta name="description" content="Privacy policy for the ten Oscillator games on Android and iOS: what the AdMob SDK collects, how consent works, and what stays on your device.">
+  <meta name="description" content="Privacy policy for the ten Oscillator games on Android and iOS: what the AppLovin MAX ad SDK collects, how consent works, and what stays on your device.">
   <meta name="theme-color" content="#0c0f16">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -19,7 +19,7 @@
     <div class="card">
       <p><strong>The short version:</strong> the games need no account and store your
       scores and settings on your device only. They are free because they show ads
-      between rounds, and Google's ad SDK — not us — collects the data needed to serve
+      between rounds, and AppLovin's ad SDK — not us — collects the data needed to serve
       those ads, including your device's advertising identifier. In the EEA, the UK and
       Switzerland you are asked for consent before any ad loads, and you can change that
       choice at any time from inside the game.</p>
@@ -49,7 +49,7 @@
           in-game scores list) — for some games these are move or round counts rather
           than points;</li>
       <li>your language choice, if you picked one instead of following the system language;</li>
-      <li>your advertising-consent choice, recorded by Google's consent SDK.</li>
+      <li>your advertising-consent choice, recorded by AppLovin's consent SDK.</li>
     </ul>
     <p>
       We never receive this data — it stays on the device and is removed when you
@@ -61,16 +61,17 @@
     <p>
       The games are free and are funded by full-screen ads shown only after a round
       ends (never during play), at most every second round and no more than once a
-      minute. Ads are currently served by <strong>Google AdMob</strong> (Google Ireland
-      Limited / Google LLC) through the Google Mobile Ads SDK embedded in the app.
+      minute. Ads are served by <strong>AppLovin MAX</strong> (AppLovin Corporation,
+      1100 Page Mill Road, Palo Alto, CA 94304, USA) through the AppLovin SDK embedded in
+      the app. It is the only advertising library in the app.
     </p>
     <p>
-      When an ad is requested, the SDK sends Google information that typically includes:
+      When an ad is requested, the SDK sends AppLovin information that typically includes:
     </p>
     <ul>
       <li>your device's <strong>advertising identifier</strong> (Android Advertising ID,
           or the iOS IDFA where you have allowed tracking);</li>
-      <li>your <strong>IP address</strong>, and the approximate location Google derives
+      <li>your <strong>IP address</strong>, and the approximate location AppLovin derives
           from it;</li>
       <li>device and app information: model, operating-system version, language,
           screen size, the app's identifier and version;</li>
@@ -78,37 +79,34 @@
           and how long it was visible.</li>
     </ul>
     <p>
-      Google uses this to select and cap ads, to measure them, and to detect invalid
+      AppLovin uses this to select and cap ads, to measure them, and to detect invalid
       traffic and fraud. Where you have consented (or where personalized advertising is
       lawful without consent), the data may also be used to build an advertising profile
-      and personalize ads across apps and sites. Google acts as an independent controller
-      for that processing under its own terms — see
-      <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use our services</a>
-      and the
-      <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">list of Google's advertising partners</a>.
+      and personalize ads across apps and sites. AppLovin acts as an independent
+      controller for that processing under its own terms — see the
+      <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin privacy policy</a>.
     </p>
     <p>
-      We ourselves receive only aggregate, non-identifying reporting from AdMob
+      MAX is a mediation platform: it can auction each ad slot between several advertising
+      networks. In the current release <strong>no additional networks are enabled</strong>,
+      so ads come from AppLovin's own exchange and AppLovin is the only recipient of the
+      data above. If we add mediated networks later they become recipients of the same
+      categories of data, and we will update this policy and the stores' privacy
+      declarations before that ships.
+    </p>
+    <p>
+      We ourselves receive only aggregate, non-identifying reporting from AppLovin
       (impressions, clicks and revenue per game and country). We do not receive your
       advertising ID, and we cannot identify you from those reports. We do not sell
       personal data, and we use no analytics or attribution service.
-    </p>
-    <p>
-      For transparency: the Android builds also <strong>bundle</strong> the AppLovin MAX
-      advertising library, which we may use in future to source ads alongside AdMob. It is
-      not configured in the current release — no ad is ever requested through it and it has
-      no account key to report to — but because it ships inside the app, its initialization
-      component starts with the app and it contributes some of the permissions listed in
-      section 5. If we ever enable it to serve ads, it becomes a recipient of the same
-      categories of advertising data described above; we will update this policy, and the
-      stores' privacy declarations, before that happens.
     </p>
 
     <h3>Your legal basis and your choices</h3>
     <p>
       In the <strong>European Economic Area, the United Kingdom and Switzerland</strong>,
-      the first launch shows Google's certified consent form (the User Messaging Platform)
-      before any ad loads. The legal basis for personalized advertising and the associated
+      the first launch shows AppLovin's Google-certified consent form (its Consent
+      Management Platform) before any ad loads. The legal basis for personalized
+      advertising and the associated
       storing of, and access to, information on your device is your <strong>consent</strong>
       (Article 6(1)(a) GDPR and the ePrivacy rules). If you decline, the games still work
       in full and you see non-personalized ads instead. You can change or withdraw your
@@ -124,7 +122,7 @@
     </p>
     <p>
       Outside the EEA/UK/Switzerland, personalized advertising is based on our and
-      Google's legitimate interest in funding a free game (Article 6(1)(f) GDPR where it
+      AppLovin's legitimate interest in funding a free game (Article 6(1)(f) GDPR where it
       applies). You can still limit it with your device controls: Android's
       <em>Settings → Privacy → Ads</em> lets you delete or reset the advertising ID, and
       iOS lets you deny tracking as described above.
@@ -133,8 +131,8 @@
     <h2>5. Permissions the games use</h2>
     <p>
       Two permissions come from the game itself; the rest are added automatically by the
-      Google Mobile Ads SDK and the other advertising libraries bundled with it, which is
-      why they appear in the app's permission list on the store page.
+      AppLovin SDK, which is why they appear in the app's permission list on the store
+      page.
     </p>
     <div class="wrap-table">
       <table>
@@ -147,8 +145,8 @@
         </tr>
         <tr>
           <td>Advertising ID (<code>com.google.android.gms.permission.AD_ID</code>)</td>
-          <td>Added by the Google Mobile Ads SDK so ads can be capped, measured and —
-              with consent — personalized.</td>
+          <td>Added by the AppLovin SDK so ads can be capped, measured and — with
+              consent — personalized.</td>
         </tr>
         <tr>
           <td>Network type (<code>ACCESS_WIFI_STATE</code>)</td>
@@ -156,20 +154,15 @@
               detect invalid traffic.</td>
         </tr>
         <tr>
-          <td>Privacy Sandbox ad services
-              (<code>ACCESS_ADSERVICES_AD_ID</code>,
-              <code>ACCESS_ADSERVICES_ATTRIBUTION</code>,
-              <code>ACCESS_ADSERVICES_TOPICS</code>)</td>
-          <td>Declared by the ad SDK so it can use Android's Privacy Sandbox APIs
-              (Topics and Attribution Reporting) on devices that support them, in place
-              of cross-app identifiers.</td>
+          <td>Vibration (<code>VIBRATE</code>)</td>
+          <td>Declared by the ad SDK for ad formats that can use haptic feedback. The
+              games themselves never vibrate your device.</td>
         </tr>
         <tr>
-          <td>Background work (<code>WAKE_LOCK</code>,
-              <code>FOREGROUND_SERVICE</code>)</td>
-          <td>Declared by the bundled advertising libraries and the scheduling component
-              they depend on. The games start no foreground service of their own and do
-              no background processing.</td>
+          <td>Licence check (<code>com.android.vending.CHECK_LICENSE</code>)</td>
+          <td>Declared by the ad SDK to ask Google Play whether the installed app is a
+              legitimate copy, which helps detect ad fraud. It reveals nothing about you
+              beyond that check.</td>
         </tr>
       </table>
     </div>
@@ -181,17 +174,17 @@
 
     <h2>6. International transfers</h2>
     <p>
-      Google may process advertising data outside the European Economic Area, including
-      in the United States. Google states that it relies on the European Commission's
-      Standard Contractual Clauses and, for its US entities, the EU–US Data Privacy
-      Framework. Because we receive only aggregate reporting, we transfer no personal
-      data ourselves.
+      AppLovin is a US company and processes advertising data outside the European
+      Economic Area, including in the United States. It relies on the safeguards described
+      in its own privacy policy, such as the European Commission's Standard Contractual
+      Clauses and, where applicable, the EU–US Data Privacy Framework. Because we receive
+      only aggregate reporting, we transfer no personal data ourselves.
     </p>
 
     <h2>7. Retention</h2>
     <p>
       Data stored on your device stays until you clear the app's data or uninstall it.
-      Advertising data collected by Google is retained under Google's own retention
+      Advertising data collected by AppLovin is retained under AppLovin's own retention
       schedule, described in its privacy policy. The aggregate reporting we see contains
       no personal data and is kept for as long as we run the games.
     </p>
@@ -201,9 +194,9 @@
       Under the GDPR you have the rights of access, rectification, erasure, restriction,
       objection and portability, and the right to withdraw consent at any time. Because
       we hold no data that identifies you, we normally cannot act on a request about
-      advertising data ourselves (Article 11 GDPR) — those requests should go to Google
+      advertising data ourselves (Article 11 GDPR) — those requests should go to AppLovin
       through the controls in its
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>.
+      <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">privacy policy</a>.
       We will always help you route a request, and everything held on your device is
       erased by uninstalling the game. Write to
       <a href="mailto:dobrzanskioscillator@gmail.com">dobrzanskioscillator@gmail.com</a>
@@ -219,7 +212,7 @@
     <p>
       <strong>California residents.</strong> We do not sell or share personal information
       for cross-context behavioural advertising within the meaning of the CCPA/CPRA, and
-      we hold no personal information about you to disclose or delete. Google's use of
+      we hold no personal information about you to disclose or delete. AppLovin's use of
       advertising data is governed by its own notice and opt-out controls.
     </p>
 
