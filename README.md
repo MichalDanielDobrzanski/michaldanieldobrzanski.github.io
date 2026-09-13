@@ -17,13 +17,17 @@ There is no build step and no framework — just HTML, CSS and a few assets.
 | `/hourglass/` (`privacy.html`, `terms.html`, `index.html`) | `public/hourglass/` — Hourglass (Clepsydra) site; this is the app's `SITE_URL` |
 | `/hourglass/privacypolicy/` | legacy alias of `/hourglass/privacy.html` |
 | `/clepsydra/`, `/clepsydra/privacy.html`, `/clepsydra/terms.html` | redirect to the `/hourglass/` equivalents (old store metadata) |
-| `/lumen/` | `public/lumen/` — Lumen site |
+| `/mononote/` | `public/mononote/index.html` (landing) |
+| `/mononote/privacy/`, `/mononote/delete-my-data/` | `public/mononote/<name>/index.html` — directory-style; the privacy-policy and data-deletion URLs entered in the Mononote Play Console listing and shipped inside the app |
+| `/games/` (`privacy.html`, `terms.html`, `index.html`) | `public/games/` — the ten Oscillator games |
+| `/lumen/` | `public/lumen/` — Lumen site; no longer linked from the home page, but kept live because the Lumen store listing points at it |
 | `/contact/` | `public/contact/index.html` |
 | `/app-ads.txt` | `public/app-ads.txt` — AdMob authorized sellers; **must** stay at the root |
 | `/.well-known/assetlinks.json`, `/.well-known/apple-app-site-association` | `public/.well-known/` — Planter Android/iOS deep-link association; **must** stay at the root |
 
 `public/assets/site.css` is the shared stylesheet for the Oscillator-family pages
-(home, Planter landing/legal, contact, 404). Hourglass and Lumen ship their own styles.
+(home, Planter landing/legal, Mononote landing/legal, contact, 404). Hourglass, Lumen
+and Games ship their own styles.
 
 ## Deployment
 
