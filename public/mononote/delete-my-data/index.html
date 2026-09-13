@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+  The data-deletion route promised by docs/store/data-safety.md §1 Q3 and by the privacy policy.
+  This URL goes in Play Console -> App content -> Data safety -> data deletion URL.
+  It must keep saying exactly what /mononote/privacy/ says; a contradiction between the two is the
+  most likely cause of a Play rejection for this app.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mononote — delete my data</title>
+  <meta name="description" content="How to have your Mononote data deleted. Your notes never leave your device, so deleting them or uninstalling the app removes them; purchase history is held by RevenueCat and Google Play and can be deleted on request.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav"><a href="/">Home</a> · <a href="/mononote/">Mononote</a> · <a href="/mononote/privacy/">Privacy Policy</a></div>
+
+    <h1>Delete my data — Mononote</h1>
+    <p class="lede">
+      There are only two kinds of data connected to Mononote: your notes, which never leave your
+      phone, and your purchase history, which only exists if you bought Mononote Pro.
+    </p>
+
+    <main>
+      <h2>Your notes</h2>
+      <p>
+        Your active note and everything in the archive are stored only on your device, encrypted with
+        a key held in the Android Keystore. They are never sent to us and they are never uploaded to
+        a server, so there is nothing on our side to delete.
+      </p>
+      <p>To remove them:</p>
+      <ul>
+        <li>Delete the active note or an archived note inside the app, or</li>
+        <li>
+          <strong>Uninstall Mononote.</strong> Uninstalling removes the notes and the encryption key
+          with them. The notes are excluded from Google cloud backup and from device-to-device
+          transfer, so no copy is left behind.
+        </li>
+      </ul>
+      <p>
+        Deleted notes cannot be recovered by us. If you want to keep them, use Export inside the app
+        first.
+      </p>
+
+      <h2>Your purchase history</h2>
+      <p>
+        If you bought Mononote Pro, two companies hold a record of that purchase:
+        <strong>Google LLC</strong>, which processed the payment through Google Play Billing, and
+        <strong>RevenueCat, Inc.</strong>, which holds the receipt and an anonymous app-user
+        identifier so the app can restore your Pro entitlement after a reinstall or on a new phone.
+      </p>
+      <p>To have the RevenueCat record deleted, email</p>
+      <p>
+        <a class="btn" href="mailto:dobrzanskioscillator@gmail.com?subject=Mononote%20-%20delete%20my%20data">dobrzanskioscillator@gmail.com</a>
+      </p>
+      <p>from the address you would like us to act on, and say that you want your Mononote purchase record deleted. Then:</p>
+      <ol>
+        <li>We will ask Google Play for the order identifier needed to locate the record.</li>
+        <li>We delete the RevenueCat customer record.</li>
+        <li>We confirm by email when it is done.</li>
+      </ol>
+      <p>
+        Two things worth knowing before you ask. Deleting the record ends your ability to restore
+        Mononote Pro without buying it again. And Google keeps its own transaction records
+        independently of us, for tax and refund purposes — to deal with those, contact
+        <a href="https://support.google.com/googleplay" rel="noopener">Google Play support</a>.
+      </p>
+
+      <h2>Everything else</h2>
+      <p>
+        There is nothing else. Mononote has no account, no sign-up and no cloud. It collects no name,
+        email address, phone number, location, contacts, calendar, photos, files or messages, no
+        advertising or device identifier, no usage analytics and no crash reports. If you never
+        bought Pro, Mononote has never transmitted anything at all, and there is nothing for anyone
+        to delete but the app itself.
+      </p>
+      <p>The full detail is in the <a href="/mononote/privacy/">Mononote privacy policy</a>.</p>
+    </main>
+
+    <footer>
+      <a href="/mononote/">Mononote</a> ·
+      <a href="/mononote/privacy/">Privacy Policy</a> ·
+      <a href="/contact/">Contact</a> ·
+      <a href="https://github.com/MichalDanielDobrzanski/">GitHub</a>
+      <br>© Oscillator Michał Dobrzański
+    </footer>
+  </div>
+</body>
+</html>
