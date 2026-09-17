@@ -14,7 +14,6 @@ sharethrough.com, bXzzb1bR, RESELLER, d53b998a7bd4ecd2
 xandr.com, 13799, RESELLER
 xandr.com, 14082, RESELLER
 
-# AppLovin MAX resellers reported missing by the SDK's app-ads.txt check (2026-09-17)
 adyoulike.com, 2d578cf695c89ec2ba707280319d2020, RESELLER
 bidease.com, bidease_seller_26, RESELLER
 contextweb.com, 562615, RESELLER, 89ff185a4c4e857c
