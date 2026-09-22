@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mononote Privacy Policy</title>
-  <meta name="description" content="Privacy policy for Mononote, the single-note Android app. Your note stays on your phone: no account, no cloud, and nothing collected except purchase history if you buy Mononote Pro.">
+  <meta name="description" content="Privacy policy for Mononote, the single-note Android app. Your note stays on your phone: no account, no cloud, and nothing leaves your device until you open the Pro screen, which sends purchase history and an anonymous purchase identifier.">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -15,8 +15,8 @@
     <h1>Mononote Privacy Policy</h1>
 
     <p>
-      <strong>Effective date:</strong> 2026-09-13<br>
-      <strong>Last updated:</strong> 2026-09-13
+      <strong>Effective date:</strong> 2026-09-22<br>
+      <strong>Last updated:</strong> 2026-09-22
     </p>
 
     <p>
@@ -29,7 +29,7 @@
     <p>
       Your note stays on your phone. There is no account, no sign-up, and no server that holds your
       writing. The only information that ever leaves your device is your purchase history, and only
-      if you buy Mononote Pro.
+      from the moment you open the Pro screen. Until then the app makes no network requests at all.
     </p>
 
     <h2>Your notes</h2>
@@ -80,14 +80,25 @@
       </li>
       <li>All of this data is encrypted in transit.</li>
     </ul>
-    <p>If you never buy anything, Mononote transmits nothing at all.</p>
+    <p>
+      <strong>When the app contacts RevenueCat, and when it does not.</strong> The billing SDK is
+      not started when the app launches; it is started the first time you open the Pro screen, tap
+      Restore, or buy. That first request is also what registers the anonymous identifier, because
+      the prices on the Pro screen come from the store. Once you own Pro the app re-checks the
+      receipt when it comes to the foreground, so a refund or a cancelled purchase takes the unlock
+      back; that check is the only network request Mononote ever makes on its own, and it is only
+      made on a device that owns Pro. If you never open the Pro screen, Mononote transmits nothing
+      at all.
+    </p>
 
     <h2>What we do not collect</h2>
     <p>
       No name. No email address. No phone number. No account. No location, precise or approximate.
-      No contacts, calendar, photos, files or messages. No advertising identifier or device
-      identifier. No analytics on how you use the app. No crash reports or diagnostics. No ads and
-      no advertising trackers, ever.
+      No contacts, calendar, photos, files or messages. No advertising identifier, and no device
+      identifier - the only identifier we ever generate is the anonymous purchase identifier
+      described under Purchases. No analytics on how you use the app; the only figures we ever see
+      are aggregate purchase counts, described there too. No crash reports or diagnostics. No ads
+      and no advertising trackers, ever.
     </p>
     <p>
       Mononote requests the notification permission only so it can show your note on your lock
@@ -114,6 +125,11 @@
         </tr>
       </tbody>
     </table>
+    <p>
+      Google's billing library brings Google's own diagnostics transport into the app. It is part of
+      Google Play Billing, we send nothing through it, and it stays dormant until the billing
+      library is started - which happens only when you open the Pro screen.
+    </p>
     <p>
       We add no other third party without updating this policy and the Play data-safety declaration
       first.
