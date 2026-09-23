@@ -140,7 +140,9 @@
         <li>App interaction events, for example: a timer was started, paused, finished or reset;
             a duration was set; a setting was changed (theme, sound, vibration, gravity mode,
             zen mode, language); the ad-free unlock was offered, purchased or restored; Privacy
-            options was opened; a paid ad impression and its value;
+            options was opened; a paid ad impression and its value; whether the ad service
+            started, your region type and consent state as the ad service reports them, and
+            whether a banner loaded or failed to load;
         </li>
         <li>a randomly generated, pseudonymous app-instance identifier, which is reset when you
             reinstall the App;
@@ -161,9 +163,17 @@
             and Security in Firebase</a>.
     </p>
     <p>
+        The App also uses <strong>Firebase Crashlytics</strong>, from the same provider, to
+        receive a report when the App crashes: the stack trace, device model, operating system
+        version, App version, free memory and disk space at the time, and a randomly generated
+        identifier for this installation of the App. We use these reports only to find and fix
+        crashes. Google processes them on our behalf under the same terms.
+    </p>
+    <p>
         The legal basis is our legitimate interest in maintaining and improving the App
         (Article 6(1)(f) GDPR). The <em>Anonymous usage statistics</em> switch under
-        <em>Settings</em>, <em>Privacy options</em> turns collection off or on at any time.
+        <em>Settings</em>, <em>Privacy options</em> turns collection off or on at any time, for
+        crash reports as well.
     </p>
 
     <h2>5. The ad-free unlock</h2>
@@ -228,8 +238,8 @@
         </tr>
         <tr>
             <td>Internet access</td>
-            <td>To load ads, to verify the ad-free unlock and to send the analytics events
-                described in section 4. The timer itself works offline.
+            <td>To load ads, to verify the ad-free unlock and to send the analytics events and
+                crash reports described in section 4. The timer itself works offline.
             </td>
         </tr>
         <tr>
@@ -255,7 +265,7 @@
         </li>
         <li>Firebase Analytics retains user-level data for the period configured in our
             Firebase project, which is no longer than 14 months; aggregated reports are retained
-            for longer.
+            for longer. Crashlytics keeps crash reports for 90 days.
         </li>
         <li>RevenueCat retains purchase records for as long as necessary to honor your unlock
             and as required by law.
