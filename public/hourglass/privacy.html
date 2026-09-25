@@ -44,9 +44,19 @@
         development kit (SDK) embedded in the App. No ad is requested for users who own the
         ad-free unlock described in section 5.
     </p>
+    <p>
+        The App also embeds the SDK of <strong>Meta Audience Network</strong>, a service of Meta
+        Platforms, Inc., 1 Meta Way, Menlo Park, CA 94025, USA (for users in the EEA, the United
+        Kingdom and Switzerland: Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5,
+        Ireland) ("Meta"). Through AppLovin MAX, Meta can bid for the banner placement and serve
+        the ad. When it does, the Meta SDK communicates with Meta directly.
+    </p>
 
     <h3>3.2 Data processed</h3>
-    <p>When an ad is requested, the SDK transmits to AppLovin information that includes:</p>
+    <p>
+        When an ad is requested, the SDKs transmit to AppLovin and, where Meta takes part in the
+        request, to Meta, information that includes:
+    </p>
     <ul>
         <li>your device's <strong>advertising identifier</strong> (the Android Advertising ID,
             or on iOS the IDFA where you have allowed tracking);
@@ -61,7 +71,7 @@
         <li>where the consent message described in section 3.4 applies, the record of your
             choices;
         </li>
-        <li>technical identifiers the SDK generates for this installation of the App.</li>
+        <li>technical identifiers the SDKs generate for this installation of the App.</li>
     </ul>
 
     <h3>3.3 Purposes and recipients</h3>
@@ -74,6 +84,15 @@
         placement. AppLovin's processing and its partners are described in the
         <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin Privacy
             Policy</a>.
+    </p>
+    <p>
+        Meta processes the data it receives to take part in the auction, to deliver, measure and
+        report on the ads it serves, and to detect fraud and invalid traffic. Meta acts as an
+        independent controller for this processing, as described in the
+        <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta
+            Privacy Policy</a> and the
+        <a href="https://www.facebook.com/audiencenetwork/policy/" target="_blank"
+           rel="noopener">Audience Network policies</a>.
     </p>
     <p>
         We receive from AppLovin only aggregated reporting, such as the number of impressions
@@ -95,7 +114,9 @@
     </p>
     <p>
         Your choices are saved on your device and sent with each ad request, so that AppLovin and
-        its partners can follow them. Where you consent, storing and accessing information on your
+        its partners can follow them. Meta does not read these choices directly: where you refuse
+        Meta in the message, the App tells the Meta SDK to apply Meta's Limited Data Use option.
+        Where you consent, storing and accessing information on your
         device and personalized advertising are based on your consent (Article 6(1)(a) GDPR).
         Some purposes, such as measuring ads and detecting fraud and invalid traffic, may rely on
         legitimate interest (Article 6(1)(f) GDPR). The message shows which ones, and section 10
@@ -232,7 +253,7 @@
             <td>Advertising ID (Android <code>com.google.android.gms.permission.AD_ID</code>);
                 App Tracking Transparency (iOS)
             </td>
-            <td>Used only by the advertising SDK, as described in section 3. Not used for users
+            <td>Used only by the advertising SDKs, as described in section 3. Not used for users
                 who own the ad-free unlock.
             </td>
         </tr>
@@ -270,12 +291,12 @@
         <li>RevenueCat retains purchase records for as long as necessary to honor your unlock
             and as required by law.
         </li>
-        <li>AppLovin retains data in accordance with its own privacy policy.</li>
+        <li>AppLovin and Meta retain data in accordance with their own privacy policies.</li>
     </ul>
 
     <h2>8. International transfers</h2>
     <p>
-        AppLovin, Google and RevenueCat are headquartered in the United States and may process
+        AppLovin, Google, Meta and RevenueCat are headquartered in the United States and may process
         data there and in other countries. Where data of users in the EEA, the United Kingdom or
         Switzerland is transferred to a country without an adequacy decision, these providers
         rely on the EU-U.S. Data Privacy Framework, including its UK Extension and the Swiss-U.S.
@@ -288,8 +309,8 @@
     <p>
         The App is not designed for or directed to children under 13 years of age, or under the
         higher age of digital consent that applies in your country (up to 16 in parts of the
-        EEA). We do not knowingly collect personal data from children, and the advertising SDK
-        is configured for a general audience, not for a child-directed service. If you are a
+        EEA). We do not knowingly collect personal data from children, and the advertising SDKs
+        are configured for a general audience, not for a child-directed service. If you are a
         parent or guardian and believe that a child has provided personal data through the App,
         please contact us and we will take appropriate steps.
     </p>
@@ -309,8 +330,9 @@
         controls are on your device and in the App: <em>Privacy options</em> in Settings, your
         device's advertising settings, or uninstalling the App, which removes all data stored on
         the device. Rights
-        concerning data held by AppLovin as an independent controller can be exercised directly
-        with AppLovin, as described in its privacy policy; we will assist you where we can.
+        concerning data held by AppLovin or Meta as independent controllers can be exercised
+        directly with them, as described in their privacy policies; we will assist you where we
+        can.
     </p>
     <p>
         Residents of California and other United States states with comparable laws have the
